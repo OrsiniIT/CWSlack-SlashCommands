@@ -23,7 +23,6 @@ require_once 'config.php';
 require_once 'functions.php';
 
 if($usedatabase==0) die("Unable to run this module without a MySQL database"); // Warning if you don't have MySQL enabled
-if(empty($_REQUEST['token']) || ($_REQUEST['token'] != $slacklunchtoken)) die("Slack token invalid."); //If Slack token is not correct, kill the connection. This allows only Slack to access the page for security purposes.
 if(empty($_REQUEST['text']))
 {
     $blanktext = true;

@@ -45,30 +45,24 @@ $smtpfrom = "notifications@domain.com"; //Set to the address all mail should be 
 $smtpname = "Company Notifications"; //Set to what you want e-mails to appear as coming from. E.x. Company Notifications <notfications@domain.com>
 
 //cwslack.php
-$slacktoken = "Slack Token Here"; //Set token from the Slack slash command screen.
+$slacktoken = "Slack Token Here"; //Set token from the App Credentials > Verification Token field.
 $useboards = 1; //Use the board function in new tickets. /t new company|summary vs /t new board|company|summary
 
 //cwslack-activities.php
-$slackactivitiestoken = "Slack Token Here"; //Set your token for the activities slash command
 
 //cwslack-contacts.php
-$slackcontactstoken = "Slack Token Here"; //Set your token for the contacts slash command
 $inactivecontacts = false; //Set to true to return inactive contacts
 
 //cwlsack-notes.php
-$slacknotestoken = "Slack Token Here"; //Set your token for the notes slash command
 $usecwname = 1; //If set to 1, it will create tickets using the user's slack name. Command will fail if their slack name is not the same as connectwise name.
 $defaultnotetype = ""; //Set to internal, external, or externalemail and this will be used if they do not specify a type. Leave blank to have no default and return an error if they don't specify.
 
 //cwslack-configs.php
-$slackconfigstoken = "Slack Token Here"; //Set your token for the configs slash command
 $hidepasswords = 0; //Set to 1 if you want to hide passwords.
 
 //cwslack-tasks.php
-$slacktaskstoken = "Slack Token Here"; //Set your token for the tasks slash command
 
 //cwslack-time.php
-$slacktimetoken = "Slack Token Here"; //Set your token for the time slash command
 $timedetailworktype = "Remote Support"; //Set to the worktype name you want to use when a note is posted to detailed
 $timeinternalworktype = "Admin"; //Set to the worktype name you want to use when a note is posted to internal
 $timeresolutionworktype = "Remote Support"; //Set to the worktype name you want to use when a note is posted to resolution
@@ -111,7 +105,6 @@ $prioritywait = 30; // Number of minutes to wait after a high-priority event bef
 
 //cwslack-follow.php
 //Requires cwslack-incoming.php to function.
-$slackfollowtoken = "Slack Token Here"; //Set your token for the follow slash command
 $followenabled = 0; //When set to 1, follow commands and the follow scripts will be enabled.
 $followtoken = "follow"; //Change to random text to be used in your CW follow link if you use it. Defaults to follow which is fine for testing.
 $unfollowtoken = "unfollow"; //Change to random text to be used in your CW unfollow link if you use it. Defaults to unfollow which is fine for testing.
@@ -120,7 +113,6 @@ $unfollowtoken = "unfollow"; //Change to random text to be used in your CW unfol
 //E-mail functionality requires you to setup your system for PHP mail(), info below
 //Windows: https://stackoverflow.com/questions/4652566/php-mail-setup-in-xampp
 //Linux: http://lukepeters.me/blog/getting-the-php-mail-function-to-work-on-ubuntu
-$slacklunchtoken = "test"; // Set your token for the lunch slash command
 $lunchchargecode = 41; // Set to your "Break" charge code that lunches should be put under
 $lunchtime = 60; // Expected number of MINUTES that a user is on lunch
 $lunchmax = 120; // Number of minutes to allow before cancelling the lunch entry, does not submit time
@@ -133,7 +125,6 @@ $lunchcreatesched = true; // Should the script create a schedule entry on the us
 $lunchsavetime = true; // Should the script submit a time entry for the user for their lunch duration
 
 //cwslack-dbmanage.php
-$slackdbmantoken = "Slack Token Here"; //Set your token for the database management slash command
 $adminlist = "admin1|admin2"; //Separate by pipe symbol as seen in example if you need multiple people to have access.
 
 //cwslack-stats.php

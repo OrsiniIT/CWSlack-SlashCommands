@@ -26,7 +26,6 @@ require_once 'functions.php';
 // Authorization array. Auto encodes API key for auhtorization above.
 $header_data = postHeader($companyname, $apipublickey, $apiprivatekey);
 
-if(empty($_REQUEST['token']) || ($_REQUEST['token'] != $slackactivitiestoken)) die("Slack token invalid."); //If Slack token is not correct, kill the connection. This allows only Slack to access the page for security purposes.
 if(empty($_REQUEST['text'])) die("No text provided."); //If there is no text added, kill the connection.
 $exploded = explode("|",$_REQUEST['text']); //Explode the string attached to the slash command for use in variables.
 

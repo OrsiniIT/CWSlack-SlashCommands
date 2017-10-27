@@ -25,7 +25,6 @@ require_once 'functions.php';
 $link=0;
 
 if(empty($_REQUEST['method']) || ($_REQUEST['method'] != $followtoken && $_REQUEST['method'] != $unfollowtoken)){
-	if(empty($_REQUEST['token']) || $_REQUEST['token'] != $slackfollowtoken) die("Slack token invalid."); //If Slack token is not correct, kill the connection. This allows only Slack to access the page for security purposes.
 	if(empty($_REQUEST['text'])) die("No text provided."); //If there is no text added, kill the connection.
 	
 	$exploded = explode(" ",$_REQUEST['text']); //Explode the string attached to the slash command for use in variables.
