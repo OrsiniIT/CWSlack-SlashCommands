@@ -31,4 +31,5 @@ if(empty($_REQUEST['command'])) die("No command provided");
 
 $slackcommand = substr($_REQUEST['command'],1);
 
-if($slackcommand == "t")
+if($slackcommand == "t") {
+}
