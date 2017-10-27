@@ -19,11 +19,6 @@
 
 // This is a development branch, please use with caution as things will frequently be changing.
 
-ini_set('display_errors', 1); //Display errors in case something occurs
-header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
-require_once 'config.php';
-require_once 'functions.php';
-
 // Authorization array. Auto encodes API key for auhtorization above.
 $header_data = authHeader($companyname, $apipublickey, $apiprivatekey);
 // Authorization array, with extra json content-type used in patch commands to change tickets.

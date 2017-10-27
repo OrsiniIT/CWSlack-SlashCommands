@@ -17,12 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
-ini_set('display_errors', 1); //Display errors in case something occurs
-header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
-require_once 'config.php';
-require_once 'functions.php';
-
 if(empty($_REQUEST['text'])) die("No text provided."); //If there is no text added, kill the connection.
 
 $exploded = explode(" ",$_REQUEST['text']); //Explode the string attached to the slash command for use in variables.

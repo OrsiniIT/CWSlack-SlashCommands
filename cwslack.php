@@ -21,4 +21,14 @@
 
 // This file is the new central router for all commands, redirecting them to the proper files as necessary.
 
+ini_set('display_errors', 1); //Display errors in case something occurs
+header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
+require_once 'config.php';
+require_once 'functions.php';
+
 if(empty($_REQUEST['token']) || ($_REQUEST['token'] != $slacktoken)) die("Slack token invalid."); //If Slack token is not correct, kill the connection. This allows only Slack to access the page for security purposes.
+if(empty($_REQUEST['command'])) die("No command provided");
+
+$slackcommand = substr($_REQUEST['command'],1);
+
+if($slackcommand == "t")

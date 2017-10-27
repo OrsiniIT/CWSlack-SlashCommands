@@ -17,11 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>. 
 */
 
-ini_set('display_errors', 1); //Display errors in case something occurs
-header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
-require_once 'config.php';
-require_once 'functions.php';
-
 $link=0;
 
 if(empty($_REQUEST['method']) || ($_REQUEST['method'] != $followtoken && $_REQUEST['method'] != $unfollowtoken)){

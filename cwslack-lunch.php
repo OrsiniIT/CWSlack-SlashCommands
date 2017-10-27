@@ -17,11 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-ini_set('display_errors', 1); //Display errors in case something occurs
-header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
-require_once 'config.php';
-require_once 'functions.php';
-
 if($usedatabase==0) die("Unable to run this module without a MySQL database"); // Warning if you don't have MySQL enabled
 if(empty($_REQUEST['text']))
 {

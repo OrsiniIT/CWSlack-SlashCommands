@@ -17,7 +17,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-//Receive connector for Connectwise Callbacks
 ini_set('display_errors', 1); //Display errors in case something occurs
 header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
 require_once 'config.php'; //Require the config file.
