@@ -17,10 +17,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+<<<<<<< HEAD
 // This is a development branch, please use with caution as things will frequently be changing.
 
 // This file is the new central router for all commands, redirecting them to the proper files as necessary.
 
+=======
+>>>>>>> refs/remotes/origin/master
 ini_set('display_errors', 1); //Display errors in case something occurs
 header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
 require_once 'config.php';
