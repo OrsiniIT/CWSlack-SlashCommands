@@ -33,25 +33,41 @@ if(empty($_REQUEST['command'])) die("No command provided");
 $slackcommand = strtolower(substr($_REQUEST['command'],1));
 
 if($slackcommand == "t" || $slackcommand == "tickets" || $slackcommand == "ticket") {
-    include 'cwslack-tickets.php';
+    include 'modules/cwslack-tickets.php';
 }
 elseif($slackcommand == "act" || $slackcommand == "activities")
 {
-    include 'cwslack-activities.php';
+    include 'modules/cwslack-activities.php';
 }
 elseif($slackcommand == "configs" || $slackcommand == "config" || $slackcommand == "configuration" || $slackcommand == "configurations")
 {
-    include 'cwslack-configs.php';
+    include 'modules/cwslack-configs.php';
 }
 elseif($slackcommand == "contact" || $slackcommand == "contacts")
 {
-    include 'cwslack-contacts.php';
+    include 'modules/cwslack-contacts.php';
 }
 elseif($slackcommand == "dbm" || $slackcommand == "dbmanage" || $slackcommand == "db" || $slackcommand == "database")
 {
-    include 'cwslack-dbmanage.php';
+    include 'modules/cwslack-dbmanage.php';
 }
 elseif($slackcommand == "follow" || $slackcommand == "unfollow")
 {
-    include 'cwslack-follow.php';
+    include 'modules/cwslack-follow.php';
+}
+elseif($slackcommand == "lunch" || $slackcommand == "break")
+{
+    include 'modules/cwslack-lunch.php';
+}
+elseif($slackcommand == "notes" || $slackcommand == "cwnotes")
+{
+    include 'modules/cwslack-notes.php';
+}
+elseif($slackcommand == "tasks")
+{
+    include 'modules/cwslack-tasks.php';
+}
+elseif($slackcommand == "times" || $slackcommand == "cwtime")
+{
+    include 'modules/cwslack-time.php';
 }
