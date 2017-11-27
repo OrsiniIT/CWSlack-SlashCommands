@@ -71,3 +71,7 @@ elseif($slackcommand == "times" || $slackcommand == "cwtime")
 {
     include 'modules/cwslack-time.php';
 }
+else
+{
+    echo "The command $slackcommand is unknown. Please see your admin for details.";
+}
