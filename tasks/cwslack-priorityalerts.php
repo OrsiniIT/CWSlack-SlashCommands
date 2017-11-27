@@ -144,7 +144,7 @@ foreach($dataTData as $entry)
                 "attachments"=>array(array(
                     "fallback" => "Priority ticket for " . $username . " with " . $company . " has been missed.",
                     "title" => "<" . $ticketurl . $ticketnumber . "&companyName=" . $companyname . "|#" . $ticketnumber . ">: " . $summary,
-                    "pretext" => "Priority ticket missed.",
+                    "pretext" => "Priority ticket missed by $username.",
                     "text" =>  "Please remind the technician that they have a " . $entryTData->priority->name . " priority ticket with " . $company . " that was scheduled for " . $dateticketformat,
                     "mrkdwn_in" => array(
                         "text",
@@ -160,7 +160,7 @@ foreach($dataTData as $entry)
                 "attachments"=>array(array(
                     "fallback" => "Priority ticket for " . $username . " with " . $company . " has been missed.",
                     "title" => "<" . $ticketurl . $ticketnumber . "&companyName=" . $companyname . "|#" . $ticketnumber . ">: " . $summary,
-                    "pretext" => "Priority ticket missed.",
+                    "pretext" => "Priority ticket missed by $username.",
                     "text" =>  "Please remind the technician that they have a " . $entryTData->priority->name . " priority ticket with " . $company . " that was scheduled for " . $dateticketformat,
                     "mrkdwn_in" => array(
                         "text",
