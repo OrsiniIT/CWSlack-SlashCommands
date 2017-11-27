@@ -18,12 +18,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-//Receive connector for Connectwise Callbacks
-ini_set('display_errors', 1); //Display errors in case something occurs
-header('Content-Type: application/json'); //Set the header to return JSON, required by Slack
-require_once 'config.php'; //Require the config file.
-require_once 'functions.php';
-
 //Dates required for URL to function
 $datenow = gmdate("Y-m-d\TH:i", strtotime("-" . $prioritywait . " minutes")); //Date set to 10 minutes prior to now, to catch for tickets happening right now.
 $date2hours = gmdate("Y-m-d\TH:i", strtotime("-2 hours")); //Date set to 2 hours out so reminders up to 2 hours function.
