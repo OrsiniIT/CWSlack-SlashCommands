@@ -23,9 +23,12 @@ require_once 'config.php'; //Require the config file.
 require_once 'functions.php';
 
 include 'tasks/cwslack-firmalerts.php';
-include 'tasks/cwslack-priorityalerts.php';
 
 if(date("i")=="30" || date("i")=="00")
 {
     include 'tasks/cwslack-timealerts.php';
+}
+if(date("i")=="31" || date("i")=="01")
+{
+    include 'tasks/cwslack-priorityalerts.php';
 }
